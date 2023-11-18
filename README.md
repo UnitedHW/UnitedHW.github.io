@@ -1,2 +1,0 @@
-# UnitedHW.github.io
-hardware
