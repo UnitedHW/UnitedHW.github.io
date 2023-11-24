@@ -1,41 +1,125 @@
 <!DOCTYPE HTML>
-<!--
-	Stellar by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!--fevicon-->
+<link rel="icon" href="images/logo_nited.png">
 <html>
-	<head>
-		<title>Generic - Stellar by HTML5 UP</title>
+	<head  src="https://code.jquery.com/jquery-3.2.1.js"></script>
+		<script>
+		var current = 0;
+		var imagenes = new Array(2);
+		 
+		$(youtube).ready(function() {
+			var numImages = 6;
+			if (numImages <= 3) {
+				$('.right-arrow').css('display', 'none');
+				$('.left-arrow').css('display', 'none');
+			}
+		 
+			$('.left-arrow').on('click',function() {
+				if (current > 0) {
+					current = current - 1;
+				} else {
+					current = numImages - 3;
+				}
+		 
+				$(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+		 
+				return false;
+			});
+		 
+			$('.left-arrow').on('hover', function() {
+				$(this).css('opacity','0.5');
+			}, function() {
+				$(this).css('opacity','1');
+			});
+		 
+			$('.right-arrow').on('hover', function() {
+				$(this).css('opacity','0.5');
+			}, function() {
+				$(this).css('opacity','1');
+			});
+		 
+			$('.right-arrow').on('click', function() {
+				if (numImages > current + 3) {
+					current = current+1;
+				} else {
+					current = 0;
+				}
+		 
+				$(".carrusel").animate({"left": -($('#product_'+current).position().left)}, 600);
+		 
+				return false;
+			}); 
+		 });
+		</script>>
+		<title>UnitedHW</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+		
 	</head>
-	<body class="is-preload">
+	<body>
+		
 
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 				<!-- Header -->
 					<header id="header">
-						<h1>Generic</h1>
-						<p>Ipsum dolor sit amet nullam</p>
+						<h1>UnitedHW</h1>
+						<p>MAS INFO</p>
 					</header>
 
 				<!-- Main -->
 					<div id="main">
 
 						<!-- Content -->
+						<div id="carrusel">
+							<a href="#" class="left-arrow"><img src="images/left-arrow.png" /></a>
+							<a href="#" class="right-arrow"><img src="images/right-arrow.png" /></a>
+							<div class="carrusel">
+								<div class="product" id="product_0">
+									<img src="gallery/01.jpg" width="195" height="100" />
+									<h5>Lorem ipsum 1</h5>
+									<p>165.00 €</p>
+								</div>
+								<div class="product" id="product_1">
+									<img src="gallery/02.jpg" width="195" height="100" />
+									<h5>Lorem ipsum 2</h5>
+									<p>100.00 €</p>
+								</div>
+								<div class="product" id="product_2">
+									<img src="gallery/03.jpg" width="195" height="100" />
+									<h5>Lorem ipsum 3</h5>
+									<p>250.00 €</p>
+								</div>
+								<div class="product" id="product_3">
+									<img src="gallery/01.jpg" width="195" height="100" />
+									<h5>Lorem ipsum 4</h5>
+									<p>75.00 €</p>
+								</div>
+								<div class="product" id="product_4">
+									<img src="gallery/02.jpg" width="195" height="100" />
+									<h5>Lorem ipsum 5</h5>
+									<p>65.00 €</p>
+								</div>
+								<div class="product" id="product_5">
+									<img src="gallery/03.jpg" width="195" height="100" />
+									<h5>Lorem ipsum 6</h5>
+									<p>40.00 €</p>
+								</div>
+							</div>
+						</div>
 							<section id="content" class="main">
 								<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
-								<h2>Magna feugiat lorem</h2>
-								<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis fames ac ante ipsum primis in faucibus.</p>
-								<p>Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Consequat leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit enim turpis lorem ipsum dolor sit amet feugiat. Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet est velit quis lorem.</p>
-								<h2>Tempus veroeros</h2>
-								<p>Cep risus aliquam gravida cep ut lacus amet. Adipiscing faucibus nunc placerat. Tempus adipiscing turpis non blandit accumsan eget lacinia nunc integer interdum amet aliquam ut orci non col ut ut praesent. Semper amet interdum mi. Phasellus enim laoreet ac ac commodo faucibus faucibus. Curae ante vestibulum ante. Blandit. Ante accumsan nisi eu placerat gravida placerat adipiscing in risus fusce vitae ac mi accumsan nunc in accumsan tempor blandit aliquet aliquet lobortis. Ultricies blandit lobortis praesent turpis. Adipiscing accumsan adipiscing adipiscing ac lacinia cep. Orci blandit a iaculis adipiscing ac. Vivamus ornare laoreet odio vis praesent nunc lorem mi. Erat. Tempus sem faucibus ac id. Vis in blandit. Nascetur ultricies blandit ac. Arcu aliquam. Accumsan mi eget adipiscing nulla. Non vestibulum ac interdum condimentum semper commodo massa arcu.</p>
-							</section>
-
+								<h2>Youtube aqui puedes encontrar mas videos de youtube</h2>
+								
+								<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+								<div class="youtube"></div>
+								<div><iframe width="560" height="315" src="https://www.youtube.com/embed/wz2cQYsEVJY?si=DOylXm-fv21EdPEC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+								<div><iframe width="560" height="315" src="https://www.youtube.com/embed/20fb-AnkDL8?si=mzy-FokILjhdaKXV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+						
 					</div>
 
 				<!-- Footer -->
@@ -67,17 +151,5 @@
 						</section>
 						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
 					</footer>
-
+					
 			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
-</html>
